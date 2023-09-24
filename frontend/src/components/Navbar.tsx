@@ -77,7 +77,7 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "h-0" : "h-40 "
-          }  bg-primary absolute top-20 flex justify-center items-center right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl text-gray-50 transition-all duration-300`}
+          }  bg-primary absolute top-20 overflow-hidden flex justify-center items-center right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl text-gray-50 transition-all duration-300`}
         >
           <ul
             className={`list-none justify-end items-start p-6 gap-4 ${
@@ -88,7 +88,7 @@ const Navbar = () => {
               <li
                 key={nav.id}
                 className={`font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-white" : "text-secondary"
+                  active === nav.title ? "text-blue-400" : "text-secondary"
                 }`}
                 onClick={() => {
                   setToggle(!toggle);
