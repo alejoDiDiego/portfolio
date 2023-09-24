@@ -76,10 +76,14 @@ const Navbar = () => {
 
         <div
           className={`${
-            !toggle ? "hidden" : "flex"
-          } p-6 bg-primary absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl text-gray-50`}
+            !toggle ? "h-0" : "h-40 "
+          }  bg-primary absolute top-20 flex justify-center items-center right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl text-gray-50 transition-all duration-300`}
         >
-          <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+          <ul
+            className={`list-none justify-end items-start p-6 gap-4 ${
+              !toggle ? "hidden" : "flex flex-1 flex-col"
+            }`}
+          >
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
