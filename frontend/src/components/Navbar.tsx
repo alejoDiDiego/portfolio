@@ -25,9 +25,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 h-14 bg-primary ${
+      className={`sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20 h-14 bg-primary ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
@@ -43,7 +41,7 @@ const Navbar = () => {
           <div className="w-9 h-9 relative">
             <Image src="/logo.png" fill alt="logo" />
           </div>
-          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
+          <p className="text-white transition-all  text-[18px] font-bold cursor-pointer flex hover:text-slate-300 p-1 rounded-lg">
             Alejo &nbsp;
             <span className="sm:block hidden"> | Fullstack Developer</span>
           </p>
@@ -56,10 +54,10 @@ const Navbar = () => {
             key={nav.id}
             className={`${
               active === nav.title ? "text-white" : "text-gray-400"
-            } hover:text-white text-[18px] font-medium cursor-pointer`}
+            } hover:text-white transition-all text-[18px] font-medium cursor-pointer`}
             onClick={() => setActive(nav.title)}
           >
-            <a href={`${nav.id}`}>{nav.title}</a>
+            <a href={`#${nav.id}`}>{nav.title}</a>
           </li>
         ))}
       </ul>
@@ -77,7 +75,7 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "h-0" : "h-40 "
-          }  bg-primary absolute top-20 overflow-hidden flex justify-center items-center right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl text-gray-50 transition-all duration-300`}
+          }  bg-slate-950 absolute top-20 overflow-hidden flex justify-center items-center right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl text-white transition-all duration-300`}
         >
           <ul
             className={`list-none justify-end items-start p-6 gap-4 ${
@@ -88,7 +86,7 @@ const Navbar = () => {
               <li
                 key={nav.id}
                 className={`font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-blue-400" : "text-secondary"
+                  active === nav.title ? "text-blue-300" : "text-secondary"
                 }`}
                 onClick={() => {
                   setToggle(!toggle);
