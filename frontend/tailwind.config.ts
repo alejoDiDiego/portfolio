@@ -9,11 +9,11 @@ const config: Config = {
   theme: {
     backgroundColor: (theme) => ({
       ...theme.colors,
-      primary: "#000000",
+      primary: "#11031a",
     }),
     extend: {
       backgroundImage: {
-        "hero-pattern": "url('/herobg3.jpg')",
+        "hero-pattern": "url('/herobg4.jpg')",
       },
     },
   },
