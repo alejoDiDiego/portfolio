@@ -26,11 +26,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20 h-16 bg-primary ${
+      className={`sm:px-16 px-6 w-full flex items-center justify-center py-5 fixed top-0 z-20 h-16 bg-primary ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl flex justify-between items-center">
         <Link
           href="/"
           className="flex items-center gap-2"

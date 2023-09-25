@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
-      <div className="sm:px-16 px-6 absolute inset-0 top-[90px] sm:top-[145px] max-w-7xl mx-auto flex flex-row justify-center gap-5">
-        <div className="mt-6 flex flex-col w-[500px] gap-5">
+      <div className="sm:px-16 absolute inset-0 top-[100px] sm:top-[145px] max-w-7xl mx-auto flex flex-col justify-center items-center gap-5">
+        <div className="mt-6 flex flex-col w-[335px] sm:w-[500px] gap-5">
           <h1 className="text-white sm:text-7xl text-5xl font-bold text-center">
             Hi, I'm <span className="text-purple-500 underline ">Alejo</span>
           </h1>
@@ -17,9 +17,10 @@ const Hero = () => {
             Engineering student
           </p>
         </div>
+        <div className="relative h-full max-h-[760px] w-full">
+          <ComputerCanvas />
+        </div>
       </div>
-
-      <ComputerCanvas />
 
       <div
         className="absolute 
