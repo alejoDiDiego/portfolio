@@ -76,7 +76,7 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "-right-[1000px]" : "right-0"
-          } h-screen w-screen bg-slate-950/90 top-0 absolute  overflow-hidden flex justify-center items-center  z-10 text-white transition-all duration-500`}
+          } h-screen w-screen bg-slate-950/90 top-0 absolute  overflow-hidden flex justify-center items-center  z-10 text-white transition-all duration-700`}
         >
           <ul
             className={`list-none items-center gap-4 flex flex-1 flex-col -mt-16 `}
