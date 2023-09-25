@@ -17,7 +17,7 @@ const Hero = () => {
             Engineering student
           </p>
         </div>
-        <div className="relative h-full max-h-[760px] w-full">
+        <div className="relative h-full max-h-[800px] w-full">
           <ComputerCanvas />
         </div>
       </div>
