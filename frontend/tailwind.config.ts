@@ -9,13 +9,11 @@ const config: Config = {
   theme: {
     backgroundColor: (theme) => ({
       ...theme.colors,
-      primary: "#11031a",
+      primary: "#000000",
     }),
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "hero-pattern": "url('/herobg3.jpg')",
       },
     },
   },

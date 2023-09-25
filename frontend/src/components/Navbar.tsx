@@ -4,6 +4,7 @@ import { styles } from "../styles";
 import Link from "next/link";
 import Image from "next/image";
 import { navLinks } from "@/constants";
+import { Squash as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -25,7 +26,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20 h-14 bg-primary ${
+      className={`sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20 h-16 bg-primary ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
@@ -38,8 +39,13 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <div className="w-9 h-9 relative">
-            <Image src="/logo.png" fill alt="logo" />
+          <div className="relative">
+            <Image
+              src="/logo.png"
+              width={40}
+              height={40 / 1000 / 1125}
+              alt="logo"
+            />
           </div>
           <p className="text-white transition-all  text-[18px] font-bold cursor-pointer flex hover:text-slate-300 p-1 rounded-lg">
             Alejo &nbsp;
@@ -62,30 +68,40 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <div className="sm:hidden relative flex flex-1 justify-end items-center">
-        <div className="w-[28px] h-[28px] object-contain">
-          <Image
-            src={toggle ? "/close.svg" : "/menu.svg"}
-            alt="menu"
-            fill
-            onClick={() => setToggle(!toggle)}
-          />
+      <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className=" object-contain relative z-20">
+          <Hamburger color="#FFFFFF" toggled={toggle} toggle={setToggle} />
         </div>
 
         <div
           className={`${
-            !toggle ? "h-0" : "h-40 "
-          }  bg-slate-950 absolute top-20 overflow-hidden flex justify-center items-center right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl text-white transition-all duration-300`}
+            !toggle ? "-right-[1000px]" : "right-0"
+          } h-screen w-screen bg-slate-950/90 top-0 absolute  overflow-hidden flex justify-center items-center  z-10 text-white transition-all duration-500`}
         >
           <ul
-            className={`list-none justify-end items-start p-6 gap-4 ${
-              !toggle ? "hidden" : "flex flex-1 flex-col"
-            }`}
+            className={`list-none items-center gap-4 flex flex-1 flex-col -mt-16 `}
           >
+            <li className="w-fit he relative">
+              <Link
+                href="/"
+                onClick={() => {
+                  setToggle(!toggle);
+                  setActive("");
+                  window.scrollTo(0, 0);
+                }}
+              >
+                <Image
+                  src="/logo.png"
+                  width={70}
+                  height={70 / 1000 / 1125}
+                  alt="logo"
+                />
+              </Link>
+            </li>
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
-                className={`font-medium cursor-pointer text-[16px] ${
+                className={`font-medium underline underline-offset-4 cursor-pointer text-2xl ${
                   active === nav.title ? "text-blue-300" : "text-secondary"
                 }`}
                 onClick={() => {
