@@ -25,7 +25,6 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
         angle={0.12}
         penumbra={1}
         intensity={4}
-        castShadow
         shadow-mapSize-width={1024}
       />
       <pointLight intensity={2} />
@@ -35,6 +34,14 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
         position={isMobile ? [-0, -0.07, -0] : [-0, -0.75, -0]}
         rotation={[0, 0.9, -0]}
         // rotation={[0, 0.6, -0]}
+      />
+      <spotLight
+        position={[0, 20, -20]}
+        angle={-1}
+        penumbra={1}
+        intensity={4}
+        castShadow
+        shadow-mapSize-width={1024}
       />
     </mesh>
   );
