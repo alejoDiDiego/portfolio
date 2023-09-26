@@ -20,3 +20,5 @@ const config: Config = {
   plugins: [],
 };
 export default config;
+
+// <a href="https://www.freepik.com/free-vector/abstract-wave-lines-dynamic-flowing-colorful-light_19010356.htm#&position=0&from_view=search&track=ais">Image by malikadesign</a> on Freepik
