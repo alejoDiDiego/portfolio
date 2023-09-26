@@ -36,12 +36,12 @@ const Navbar = () => {
           className="flex items-center gap-2"
           onClick={() => {
             setActive("");
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
           <div className="relative">
             <Image
-              src="/logo.png"
+              src="/highlogo.png"
               width={40}
               height={40 / 1000 / 1125}
               alt="logo"
@@ -87,11 +87,11 @@ const Navbar = () => {
                 onClick={() => {
                   setToggle(!toggle);
                   setActive("");
-                  window.scrollTo(0, 0);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 <Image
-                  src="/logo.png"
+                  src="/highlogo.png"
                   width={70}
                   height={70 / 1000 / 1125}
                   alt="logo"

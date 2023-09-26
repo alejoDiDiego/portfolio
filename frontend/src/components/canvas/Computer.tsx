@@ -8,6 +8,8 @@ import Loader from "../Loader";
 
 // "1970s retro computer" (https://skfb.ly/oxZFA) by Tim.Morrow is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
+// "IBM PCjr 4863 Computer-Freepoly.org" (https://skfb.ly/oLnG9) by Freepoly.org is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+
 const Computer = ({ isMobile }: { isMobile: boolean }) => {
   // For the mobile version I needed to compress the scene.gltf to a glb. To do that I used the following command: "npx gltfjsx scene.gltf --transform" inside the public/pc folder. It created scene-transformed.glb and a Scene.jsx. The last one was deleted
   //Then, that compressed file was exported to https://juunini.github.io/gltf-optimizer/ where I compressed again to gain a lot of performance
@@ -25,8 +27,10 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
   });
 
   const computer = useGLTF(
-    `${isMobile ? "/pc/compressed.glb" : "/pc/scene.gltf"}`
+    isMobile ? "/pc2/compressed.glb" : "/pc2/compressed2.glb"
   );
+
+  console.log(computer);
 
   return (
     <Float speed={5} floatIntensity={isMobile ? 1 : 0.75} rotationIntensity={0}>
@@ -43,16 +47,16 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
         <pointLight intensity={2} />
         <primitive
           object={computer.scene}
-          scale={isMobile ? 0.8 : 0.9}
-          position={isMobile ? [-0, -0.07, -0] : [-0, -0.75, -0]}
-          rotation={[0, 0.9, -0]}
+          scale={isMobile ? 5 : 6}
+          position={isMobile ? [0, 0, -0.1] : [-0, -0.75, -0]}
+          rotation={[0, 0.7, -0]}
           // rotation={[0, 0.6, -0]}
         />
       </mesh>
     </Float>
   );
 };
-
+// [-1, -0.07, -0]
 const ComputerCanvas = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -78,13 +82,19 @@ const ComputerCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
+  // [20, 10, 5]
+  // [20, 12.5, 5]
 
+  // [20, 3, 5]
   return (
     <Canvas
       frameloop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 20 }}
+      camera={{
+        position: isMobile ? [20, 12.5, 5] : [20, 10, 5],
+        fov: isMobile ? 17.5 : 20,
+      }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<Loader />}>
