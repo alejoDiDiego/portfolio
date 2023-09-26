@@ -1,14 +1,8 @@
 "use client";
 
-import React, {
-  Suspense,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
+import { OrbitControls, Preload, useGLTF, Float } from "@react-three/drei";
 
 import Loader from "../Loader";
 
@@ -18,15 +12,15 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
   // For the mobile version I needed to compress the scene.gltf to a glb. To do that I used the following command: "npx gltfjsx scene.gltf --transform" inside the public/pc folder. It created scene-transformed.glb and a Scene.jsx. The last one was deleted
   //Then, that compressed file was exported to https://juunini.github.io/gltf-optimizer/ where I compressed again to gain a lot of performance
 
-  const meshRef = useRef<THREE.Mesh>(null);
-
   const { invalidate } = useThree();
 
-  useFrame(({ clock }) => {
-    const time = Math.sin(clock.getElapsedTime()) * 0.1;
-    if (meshRef.current) {
-      meshRef.current.position.y = time;
-    }
+  useFrame(() => {
+    invalidate();
+  });
+
+  // To float I have to use invalidate and <Float></Float>
+
+  useFrame(() => {
     invalidate();
   });
 
@@ -35,24 +29,27 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
   );
 
   return (
-    <mesh ref={meshRef}>
-      <hemisphereLight intensity={isMobile ? 3 : 4} groundColor="black" />
-      <spotLight
-        position={[-20, 50, 10]}
-        angle={0.12}
-        penumbra={1}
-        intensity={4}
-        shadow-mapSize-width={1024}
-      />
-      <pointLight intensity={2} />
-      <primitive
-        object={computer.scene}
-        scale={isMobile ? 0.8 : 0.9}
-        position={isMobile ? [-0, -0.07, -0] : [-0, -0.75, -0]}
-        rotation={[0, 0.9, -0]}
-        // rotation={[0, 0.6, -0]}
-      />
-    </mesh>
+    <Float speed={5} floatIntensity={isMobile ? 1 : 0.75} rotationIntensity={0}>
+      {/* <mesh ref={meshRef}> */}
+      <mesh>
+        <hemisphereLight intensity={isMobile ? 3 : 4} groundColor="black" />
+        <spotLight
+          position={[-20, 50, 10]}
+          angle={0.12}
+          penumbra={1}
+          intensity={4}
+          shadow-mapSize-width={1024}
+        />
+        <pointLight intensity={2} />
+        <primitive
+          object={computer.scene}
+          scale={isMobile ? 0.8 : 0.9}
+          position={isMobile ? [-0, -0.07, -0] : [-0, -0.75, -0]}
+          rotation={[0, 0.9, -0]}
+          // rotation={[0, 0.6, -0]}
+        />
+      </mesh>
+    </Float>
   );
 };
 

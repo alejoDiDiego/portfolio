@@ -3,14 +3,15 @@
 import React from "react";
 import ComputerCanvas from "./canvas/Computer";
 import { motion } from "framer-motion";
+import { SectionWrapper } from "@/hoc";
 
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div className="sm:px-16 absolute inset-0 top-[100px] sm:top-[145px] max-w-7xl mx-auto flex flex-col justify-center items-center gap-5">
         <div className="mt-6 flex flex-col w-[335px] sm:w-[500px] gap-5">
-          <h1 className="text-white sm:text-7xl text-5xl font-bold text-center">
-            Hi, I'm <span className="text-purple-500 underline ">Alejo</span>
+          <h1 className="text-white sm:text-7xl text-5xl font-black text-center">
+            Hi, I'm <span className="text-purple-500  underline ">Alejo</span>
           </h1>
           <p className="text-white sm:text-left sm:ml-11 font-bold sm:text-lg ml-8">
             Fullstack Developer, Computer Technician, Computer Systems

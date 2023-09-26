@@ -1,3 +1,6 @@
+const front = "/images/front.png";
+const back = "/images/back.png";
+
 const navLinks = [
   {
     id: "about",
@@ -13,4 +16,15 @@ const navLinks = [
   },
 ];
 
-export { navLinks };
+const services = [
+  {
+    title: "Frontend Developer",
+    icon: front,
+  },
+  {
+    title: "Backend Developer",
+    icon: back,
+  },
+];
+
+export { navLinks, services };
