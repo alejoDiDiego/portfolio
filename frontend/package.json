@@ -24,6 +24,7 @@
     "next": "13.5.2",
     "postcss": "8.4.30",
     "react": "18.2.0",
+    "react-chrono": "^2.3.0",
     "react-dom": "18.2.0",
     "react-helmet": "^6.1.0",
     "react-parallax-tilt": "^1.7.168",
@@ -35,6 +36,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "@types/react-helmet": "^6.1.6"
+    "@types/react-helmet": "^6.1.6",
+    "@types/react-vertical-timeline-component": "^3.3.4"
   }
 }

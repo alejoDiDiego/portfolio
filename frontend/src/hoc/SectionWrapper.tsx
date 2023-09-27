@@ -16,7 +16,7 @@ const SectionWrapper = (
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className={`sm:px-16 px-6 sm:py-16 py-10 mt-32 max-w-4xl flex justify-center relative z-0`}
+        className={`max-w-4xl flex justify-center relative z-0`}
       >
         <span className="hash-span" id={idName}>
           &nbsp;

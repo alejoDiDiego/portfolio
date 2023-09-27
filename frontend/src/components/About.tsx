@@ -67,7 +67,7 @@ const About = () => {
       </motion.p>
       <div className="flex gap-10 mt-20 flex-wrap sm:justify-center lg:justify-start">
         {services.map((service, index) => (
-          <Card index={index} {...service} />
+          <Card index={index} key={index} {...service} />
         ))}
       </div>
     </div>

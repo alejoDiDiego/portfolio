@@ -28,8 +28,6 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
     )
   );
 
-  console.log(computer);
-
   return (
     <Float
       speed={5}
@@ -109,7 +107,7 @@ const ComputerCanvas = () => {
           // maxPolarAngle={Math.PI / 2}
           // minPolarAngle={Math.PI / 2}
         />
-        <Computer isMobile={isMobile} inView={inView} />
+        <Computer isMobile={isMobile} />
       </Suspense>
 
       <Preload all />

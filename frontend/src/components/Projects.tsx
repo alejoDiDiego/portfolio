@@ -1,12 +1,17 @@
 "use client";
+import { education } from "@/constants";
 import { SectionWrapper } from "@/hoc";
 import { textVariant } from "@/utils/motion";
 import { motion } from "framer-motion";
 import React from "react";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 
 const Projects = () => {
   return (
-    <div className="text-white max-w-3xl w-full">
+    <div className="text-white mt-32 max-w-3xl w-full">
       <motion.div variants={textVariant()}>
         <p className="sm:text-[18px] text-[14px] text-secondary tracking-wider">
           SOME OF MY WORKS
@@ -15,8 +20,6 @@ const Projects = () => {
           Projects.
         </h2>
       </motion.div>
-
-      <div className="flex gap-10 mt-20 flex-wrap sm:justify-center lg:justify-start"></div>
     </div>
   );
 };
