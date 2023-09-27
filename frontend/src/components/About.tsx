@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
-import { Tilt } from "react-tilt";
+import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/hoc";
 import { fadeIn, textVariant } from "@/utils/motion";
-import { styles } from "@/styles";
 import { services } from "@/constants";
 
 const Card = ({
@@ -18,13 +17,12 @@ const Card = ({
 }) => {
   return (
     <Tilt
-      options={{
-        max: 35,
-        scale: 1,
-        speed: 100,
-        reset: true,
-      }}
-      clasName=""
+      className="rounded-3xl overflow-hidden"
+      transitionSpeed={1500}
+      perspective={500}
+      glareEnable={true}
+      glareMaxOpacity={0.45}
+      scale={1.02}
     >
       <motion.div
         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
@@ -47,7 +45,7 @@ const Card = ({
 
 const About = () => {
   return (
-    <div className="text-white">
+    <div className="text-white  max-w-3xl w-full">
       <motion.div variants={textVariant()}>
         <p className="sm:text-[18px] text-[14px] text-secondary tracking-wider">
           INTRODUCTION
@@ -58,7 +56,7 @@ const About = () => {
       </motion.div>
       <motion.p
         variants={fadeIn("up", "", 0.1, 1)}
-        className="mt-4 text-white text-[17px] max-w-3xl leading-[30px] "
+        className="mt-4 text-white text-[17px] leading-[30px] "
       >
         I am a software developer with knowledge in Typescript, Javascript,
         React.js, Node.js, Express, Next.js, C#, ASP.NET Core and SQL and NoSQL

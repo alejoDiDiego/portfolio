@@ -3,7 +3,6 @@
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF, Float } from "@react-three/drei";
-
 import Loader from "../Loader";
 
 // "1970s retro computer" (https://skfb.ly/oxZFA) by Tim.Morrow is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
@@ -36,7 +35,7 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
     <Float
       speed={5}
       floatIntensity={isMobile ? 1 : 0.75}
-      rotationIntensity={0.25}
+      rotationIntensity={isMobile ? 0.35 : 0.25}
     >
       {/* <mesh ref={meshRef}> */}
       <mesh>

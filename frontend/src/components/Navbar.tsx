@@ -27,16 +27,15 @@ const Navbar = () => {
   return (
     <nav
       className={`sm:px-16 px-6 w-full flex items-center justify-center py-5 fixed top-0 z-20 h-16 bg-primary ${
-        scrolled ? "bg-primary" : "bg-transparent"
+        scrolled ? "bg-primary/50 sm:bg-transparent" : "bg-transparent"
       }`}
     >
       <div className="w-full max-w-7xl flex justify-between items-center">
-        <Link
-          href="/"
+        <a
+          href="#"
           className="flex items-center gap-2"
           onClick={() => {
             setActive("");
-            window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
           <div className="relative">
@@ -51,7 +50,7 @@ const Navbar = () => {
             Alejo &nbsp;
             <span className="sm:block hidden"> | Fullstack Developer</span>
           </p>
-        </Link>
+        </a>
       </div>
 
       <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -82,8 +81,8 @@ const Navbar = () => {
             className={`list-none items-center gap-4 flex flex-1 flex-col -mt-16 `}
           >
             <li className="w-fit he relative">
-              <Link
-                href="/"
+              <a
+                href="#"
                 onClick={() => {
                   setToggle(!toggle);
                   setActive("");
@@ -96,7 +95,7 @@ const Navbar = () => {
                   height={70 / 1000 / 1125}
                   alt="logo"
                 />
-              </Link>
+              </a>
             </li>
             {navLinks.map((nav) => (
               <li
