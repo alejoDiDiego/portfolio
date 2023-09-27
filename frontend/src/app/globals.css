@@ -5,6 +5,54 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: #030a38;
+  background-color: #0f0019;
   scroll-behavior: smooth;
+}
+
+.gradient {
+  background: hsla(187, 100%, 28%, 1);
+
+  background: linear-gradient(
+    0deg,
+    hsla(187, 100%, 28%, 1) 0%,
+    hsla(273, 100%, 25%, 1) 75%
+  );
+
+  background: -moz-linear-gradient(
+    0deg,
+    hsla(187, 100%, 28%, 1) 0%,
+    hsla(273, 100%, 25%, 1) 75%
+  );
+
+  background: -webkit-linear-gradient(
+    0deg,
+    hsla(187, 100%, 28%, 1) 0%,
+    hsla(273, 100%, 25%, 1) 75%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#007E8F", endColorstr="#45007D", GradientType=1 );
+}
+
+.bg {
+  background: hsla(276, 100%, 5%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(276, 100%, 5%, 1) 0%,
+    hsla(252, 100%, 16%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(276, 100%, 5%, 1) 0%,
+    hsla(252, 100%, 16%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(276, 100%, 5%, 1) 0%,
+    hsla(252, 100%, 16%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0F0019", endColorstr="#110054", GradientType=1 );
 }

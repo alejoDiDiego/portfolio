@@ -33,7 +33,11 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
   console.log(computer);
 
   return (
-    <Float speed={5} floatIntensity={isMobile ? 1 : 0.75} rotationIntensity={0}>
+    <Float
+      speed={5}
+      floatIntensity={isMobile ? 1 : 0.75}
+      rotationIntensity={0.25}
+    >
       {/* <mesh ref={meshRef}> */}
       <mesh>
         <hemisphereLight intensity={isMobile ? 3 : 4} groundColor="black" />
@@ -47,8 +51,8 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
         <pointLight intensity={2} />
         <primitive
           object={computer.scene}
-          scale={isMobile ? 5 : 6}
-          position={isMobile ? [0, 0, -0.1] : [-0, -0.75, -0]}
+          scale={isMobile ? 4 : 6}
+          position={isMobile ? [0, 0.1, -0.1] : [-0, -0.75, -0]}
           rotation={[0, 0.7, -0]}
           // rotation={[0, 0.6, -0]}
         />

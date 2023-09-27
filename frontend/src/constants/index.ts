@@ -1,5 +1,5 @@
-const front = "/images/front.png";
-const back = "/images/back.png";
+const front = "/front.png";
+const back = "/back.png";
 
 const navLinks = [
   {

@@ -24,7 +24,7 @@ const Hero = () => {
       </div>
 
       <div
-        className="absolute 
+        className="absolute sm:hidden
       sm:bottom-20 bottom-32 w-full flex justify-center items-center"
       >
         <a href="#about">
