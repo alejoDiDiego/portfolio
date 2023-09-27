@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Suspense, useEffect, useRef, useState } from "react";
+import React, { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF, Float } from "@react-three/drei";
 import Loader from "../Loader";
@@ -14,19 +14,17 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
   //Then, that compressed file was exported to https://juunini.github.io/gltf-optimizer/ where I compressed again to gain a lot of performance
 
   const { invalidate } = useThree();
-
   useFrame(() => {
     invalidate();
   });
 
   // To float I have to use invalidate and <Float></Float>
 
-  useFrame(() => {
-    invalidate();
-  });
-
   const computer = useGLTF(
-    isMobile ? "/pc2/compressed.glb" : "/pc2/compressed2.glb"
+    useMemo(
+      () => (isMobile ? "/pc2/compressed.glb" : "/pc2/compressed2.glb"),
+      [isMobile]
+    )
   );
 
   console.log(computer);
