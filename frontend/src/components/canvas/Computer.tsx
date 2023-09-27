@@ -4,7 +4,7 @@ import React, { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF, Float } from "@react-three/drei";
 import Loader from "../Loader";
-
+import { useInView } from "react-intersection-observer";
 // "1970s retro computer" (https://skfb.ly/oxZFA) by Tim.Morrow is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
 
 // "IBM PCjr 4863 Computer-Freepoly.org" (https://skfb.ly/oLnG9) by Freepoly.org is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
@@ -13,10 +13,11 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
   // For the mobile version I needed to compress the scene.gltf to a glb. To do that I used the following command: "npx gltfjsx scene.gltf --transform" inside the public/pc folder. It created scene-transformed.glb and a Scene.jsx. The last one was deleted
   //Then, that compressed file was exported to https://juunini.github.io/gltf-optimizer/ where I compressed again to gain a lot of performance
 
-  const { invalidate } = useThree();
-  useFrame(() => {
-    invalidate();
-  });
+  // invalidate makes the frames to be continuously rendered. But frameloop={inView ? "always" : "never"} solves it and makes the performance much better
+  // const { invalidate } = useThree();
+  // useFrame(() => {
+  //   invalidate();
+  // });
 
   // To float I have to use invalidate and <Float></Float>
 
@@ -85,11 +86,14 @@ const ComputerCanvas = () => {
   }, []);
   // [20, 10, 5]
   // [20, 12.5, 5]
-
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
   // [20, 3, 5]
   return (
     <Canvas
-      frameloop="demand"
+      ref={ref}
+      frameloop={inView ? "always" : "never"}
       shadows
       dpr={[1, 2]}
       camera={{
@@ -105,7 +109,7 @@ const ComputerCanvas = () => {
           // maxPolarAngle={Math.PI / 2}
           // minPolarAngle={Math.PI / 2}
         />
-        <Computer isMobile={isMobile} />
+        <Computer isMobile={isMobile} inView={inView} />
       </Suspense>
 
       <Preload all />
