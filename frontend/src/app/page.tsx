@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Education from "@/components/Education";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
+import Tech from "@/components/Tech";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       </div>
       <About />
       <Education />
+      <Tech />
       <Projects />
     </main>
   );

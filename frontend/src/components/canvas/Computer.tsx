@@ -23,7 +23,7 @@ const Computer = ({ isMobile }: { isMobile: boolean }) => {
 
   const computer = useGLTF(
     useMemo(
-      () => (isMobile ? "/pc2/compressed.glb" : "/pc2/compressed2.glb"),
+      () => (isMobile ? "/pc/compressed.glb" : "/pc/compressed2.glb"),
       [isMobile]
     )
   );

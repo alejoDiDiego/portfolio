@@ -1,7 +1,7 @@
 "use client";
 import { education } from "@/constants";
 import { SectionWrapper } from "@/hoc";
-import { textVariant } from "@/utils/motion";
+import { fadeIn, textVariant } from "@/utils/motion";
 import { motion } from "framer-motion";
 import React from "react";
 import {
@@ -16,32 +16,38 @@ const EducationCard = ({
   title,
   institution,
   logo,
+  index,
 }: {
   startDate: string;
   finishDate: string;
   title: string;
   institution: string;
   logo: string;
+  index: number;
 }) => {
   return (
     <VerticalTimelineElement
-      // iconStyle={{ background: "#000000" }}
-      // contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-      // contentStyle={{ background: "#232631", color: "#fff" }}
+      id={title}
+      iconStyle={{
+        background: "white",
+      }}
+      visible={true}
+      contentArrowStyle={{ borderRight: "7px solid  #232631" }}
+      contentStyle={{ background: "#1d1836", color: "#fff" }}
       date={
         startDate == finishDate ? startDate : `${startDate} - ${finishDate}`
       }
       icon={
-        <div className="flex justify-center items-center w-full h-full">
+        <div className="flex overflow-hidden justify-center items-center w-full h-full">
           <img
             src={logo}
             alt={institution}
-            className="w-[60%] h-[60%] object-contain"
+            className="w-full rounded-full h-full object-contain"
           />
         </div>
       }
     >
-      <div>
+      <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
         <h3 className="text-white text-[24px] font-bold">{title}</h3>
         <p
           className="text-secondary text-[16px] font-semibold"
@@ -49,30 +55,28 @@ const EducationCard = ({
         >
           {institution}
         </p>
-      </div>
+      </motion.div>
     </VerticalTimelineElement>
   );
 };
 
 const Education = () => {
   return (
-    <div className="text-white mt-32 max-w-3xl w-full">
+    <div className="text-white   max-w-3xl w-full">
       <motion.div variants={textVariant()}>
         <p className="sm:text-[18px] text-[14px] text-secondary tracking-wider">
           MY TRAYECTORY
         </p>
-        <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
+        <h2 className="text-white font-black md:text-[60px] sm:text-5xl text-3xl mb-10">
           Education.
         </h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline animate={true} lineColor="" layout="2-columns">
-          {education.map((education, index) => (
-            <EducationCard key={index} {...education} />
-          ))}
-        </VerticalTimeline>
-      </div>
+      <VerticalTimeline lineColor="" animate={false} layout="1-column-left">
+        {education.map((education, index) => (
+          <EducationCard key={index} index={index} {...education} />
+        ))}
+      </VerticalTimeline>
     </div>
   );
 };
