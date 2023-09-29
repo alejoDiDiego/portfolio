@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { SectionWrapper } from "@/hoc";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { services } from "@/constants";
+import Title from "./Title";
 
 const Card = ({
   index,
@@ -34,7 +35,7 @@ const Card = ({
             alt={title}
             className="w-[100px] h-[100px] object-contain"
           />
-          <h3 className="text-white text-center font-black text-2xl">
+          <h3 className="text-white noselect text-center font-black text-2xl">
             {title}
           </h3>
         </div>
@@ -46,14 +47,7 @@ const Card = ({
 const About = () => {
   return (
     <div className="text-white  max-w-3xl w-full">
-      <motion.div variants={textVariant()}>
-        <p className="sm:text-[18px] text-[14px] text-secondary tracking-wider">
-          INTRODUCTION
-        </p>
-        <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">
-          About me.
-        </h2>
-      </motion.div>
+      <Title subTitle="INTRODUCTION" title="About me." />
       <motion.p
         variants={fadeIn("up", "", 0.1, 1)}
         className="mt-4 text-white text-[17px] leading-[30px] "

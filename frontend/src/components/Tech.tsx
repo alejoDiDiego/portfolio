@@ -16,7 +16,7 @@ const TechCard = ({
   name: string;
 }) => {
   return (
-    <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.6)}>
+    <motion.div variants={fadeIn("right", "spring", index * 0.3, 0.6)}>
       <Tilt
         className="overflow-hidden w-full sm:w-[150px] gradient shadow-card rounded-3xl p-[2px]"
         transitionSpeed={1500}
@@ -24,12 +24,15 @@ const TechCard = ({
         glareEnable={true}
         glareMaxOpacity={0.45}
         scale={1.02}
+        reset={false}
       >
         <div className="bg-[#200744] rounded-3xl py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
           <div className="w-[100px] min-h-[100px] h-fit flex justify-center items-center overflow-hidden bg-white rounded-md py-2 px-3">
             <img src={icon} alt={name} className="w-[100%] h-fit " />
           </div>
-          <h3 className="text-white text-center  font-black text-xl">{name}</h3>
+          <h3 className="text-white text-center noselect font-black text-xl">
+            {name}
+          </h3>
         </div>
       </Tilt>
     </motion.div>

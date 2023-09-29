@@ -9,6 +9,7 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import Title from "./Title";
 
 const EducationCard = ({
   startDate,
@@ -63,14 +64,7 @@ const EducationCard = ({
 const Education = () => {
   return (
     <div className="text-white   max-w-3xl w-full">
-      <motion.div variants={textVariant()}>
-        <p className="sm:text-[18px] text-[14px] text-secondary tracking-wider">
-          MY TRAYECTORY
-        </p>
-        <h2 className="text-white font-black md:text-[60px] sm:text-5xl text-3xl mb-10">
-          Education.
-        </h2>
-      </motion.div>
+      <Title subTitle="MY TRAYECTORY" title="Education." />
 
       <VerticalTimeline lineColor="" animate={false} layout="1-column-left">
         {education.map((education, index) => (

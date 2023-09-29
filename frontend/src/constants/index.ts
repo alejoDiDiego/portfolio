@@ -187,6 +187,59 @@ const technologies = [
   },
 ];
 
+const projects = [
+  {
+    name: "Task Manager",
+    description:
+      "A Task Manager/TODO web app where you can create, edit, finish and delete your tasks. They are stored in the localStorage of your browser.",
+    technologies: [
+      "React",
+      "React Router",
+      "Typescript",
+      "TailwindCSS",
+      "MobX",
+    ],
+    link: "",
+    image: "",
+    github: "",
+  },
+  {
+    name: "Tic Tac Toe",
+    description:
+      "A Tic Tac Toe player vs player that counts the matches and wins.",
+    technologies: ["React", "NextJS", "Typescript", "TailwindCSS", "CSS"],
+    link: "",
+    image: "",
+    github: "",
+  },
+  {
+    name: "Inmo",
+    description:
+      "A Zillow like web app made as part of the profesional practices in my last year of technical high school. You could create and edit a profile, create, edit, delete and search for properties. You could also see and search properties in a map and filter them by price, type, etc.",
+    technologies: [
+      "React",
+      "NextJS",
+      "Javascript",
+      "CSS",
+      "Firebase",
+      "OpenStreetMaps",
+      "Leaflet",
+    ],
+    link: "",
+    image: "",
+    github: "",
+  },
+  {
+    name: "Color Changer",
+    description:
+      "Simple web page where you can change the background color by clicking a button. ",
+    technologies: ["React", "Javascript", "CSS", "TailwindCSS"],
+    link: "",
+    image: "",
+    github: "",
+  },
+];
+
 // <a href="https://www.flaticon.com/free-icons/css" title="css icons">Css icons created by Pixel perfect - Flaticon</a>
 // <a href="https://www.flaticon.com/free-icons/html" title="html icons">Html icons created by Freepik - Flaticon</a>
 // <a href="https://www.flaticon.com/free-icons/javascript" title="javascript icons">Javascript icons created by Freepik - Flaticon</a>
