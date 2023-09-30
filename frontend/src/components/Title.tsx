@@ -4,8 +4,8 @@ import React from "react";
 
 const Title = ({ subTitle, title }: { subTitle: string; title: string }) => {
   return (
-    <motion.div variants={textVariant()}>
-      <p className="sm:text-[18px] text-[14px] uppercase text-secondary tracking-wider">
+    <motion.div className="mt-16" variants={textVariant()}>
+      <p className="text-white sm:text-[18px] text-[14px] uppercase text-secondary tracking-wider">
         {subTitle}
       </p>
       <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]">

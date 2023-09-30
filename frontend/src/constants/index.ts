@@ -199,23 +199,23 @@ const projects = [
       "TailwindCSS",
       "MobX",
     ],
-    link: "",
-    image: "",
-    github: "",
+    link: "https://task-manager-sigma-ten.vercel.app/",
+    image: "/projects/taskmanager.png",
+    github: "https://github.com/alejoDiDiego/task-manager",
   },
   {
     name: "Tic Tac Toe",
     description:
-      "A Tic Tac Toe player vs player that counts the matches and wins.",
+      "A Tic Tac Toe player vs player game that counts the matches and wins.",
     technologies: ["React", "NextJS", "Typescript", "TailwindCSS", "CSS"],
-    link: "",
-    image: "",
-    github: "",
+    link: "https://tictactoe-brown-iota.vercel.app/",
+    image: "/projects/tictactoe.png",
+    github: "https://github.com/alejoDiDiego/tictactoe",
   },
   {
     name: "Inmo",
     description:
-      "A Zillow like web app made as part of the profesional practices in my last year of technical high school. You could create and edit a profile, create, edit, delete and search for properties. You could also see and search properties in a map and filter them by price, type, etc.",
+      "A Zillow like web app made as part of the professional practices in my last year of technical high school. You could create and edit a profile, create, edit, delete and search for properties. You could also see and search properties in a map and filter them by price, type, etc.",
     technologies: [
       "React",
       "NextJS",
@@ -225,8 +225,8 @@ const projects = [
       "OpenStreetMaps",
       "Leaflet",
     ],
-    link: "",
-    image: "",
+    link: "https://drive.google.com/file/d/1joz3aMSQKgs0_qHgr4DDcIgv7HG2hx45/view",
+    image: "/projects/inmo.png",
     github: "",
   },
   {
@@ -234,9 +234,9 @@ const projects = [
     description:
       "Simple web page where you can change the background color by clicking a button. ",
     technologies: ["React", "Javascript", "CSS", "TailwindCSS"],
-    link: "",
-    image: "",
-    github: "",
+    link: "https://alejodidiego.github.io/color-changer/",
+    image: "/projects/colorchanger.png",
+    github: "https://github.com/alejoDiDiego/color-changer",
   },
 ];
 
@@ -244,4 +244,4 @@ const projects = [
 // <a href="https://www.flaticon.com/free-icons/html" title="html icons">Html icons created by Freepik - Flaticon</a>
 // <a href="https://www.flaticon.com/free-icons/javascript" title="javascript icons">Javascript icons created by Freepik - Flaticon</a>
 // <a href="https://www.flaticon.com/free-icons/typescript" title="typescript icons">Typescript icons created by Freepik - Flaticon</a>
-export { navLinks, services, education, technologies };
+export { navLinks, services, education, technologies, projects };

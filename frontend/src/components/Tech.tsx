@@ -5,6 +5,7 @@ import { fadeIn, textVariant } from "@/utils/motion";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
+import Title from "./Title";
 
 const TechCard = ({
   index,
@@ -18,7 +19,7 @@ const TechCard = ({
   return (
     <motion.div variants={fadeIn("right", "spring", index * 0.3, 0.6)}>
       <Tilt
-        className="overflow-hidden w-full sm:w-[150px] gradient shadow-card rounded-3xl p-[2px]"
+        className="overflow-hidden w-[130px] sm:w-[150px] gradient shadow-card rounded-3xl p-[2px]"
         transitionSpeed={1500}
         perspective={500}
         glareEnable={true}
@@ -27,10 +28,10 @@ const TechCard = ({
         reset={false}
       >
         <div className="bg-[#200744] rounded-3xl py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
-          <div className="w-[100px] min-h-[100px] h-fit flex justify-center items-center overflow-hidden bg-white rounded-md py-2 px-3">
+          <div className="w-[80px] sm:w-[100px] min-h-[60px] sm:min-h-[100px] h-fit flex justify-center items-center overflow-hidden bg-white rounded-md p-1 sm:py-2 sm:px-3">
             <img src={icon} alt={name} className="w-[100%] h-fit " />
           </div>
-          <h3 className="text-white text-center noselect font-black text-xl">
+          <h3 className="text-white text-center noselect font-black text-lg sm:text-xl">
             {name}
           </h3>
         </div>
@@ -42,15 +43,8 @@ const TechCard = ({
 const Tech = () => {
   return (
     <div className=" max-w-3xl w-full">
-      <motion.div className="text-white" variants={textVariant()}>
-        <p className="sm:text-[18px] text-[14px] text-secondary tracking-wider">
-          WHAT I USE
-        </p>
-        <h2 className=" font-black md:text-[60px] sm:text-5xl text-3xl mb-10">
-          Tech.
-        </h2>
-      </motion.div>
-      <div className="flex flex-row flex-wrap justify-center sm:justify-start gap-10">
+      <Title subTitle="WHAT I USE" title="Tech." />
+      <div className="flex flex-row flex-wrap justify-center mt-10 sm:justify-start gap-10">
         {technologies.map((tech, index) => (
           <TechCard
             key={index}

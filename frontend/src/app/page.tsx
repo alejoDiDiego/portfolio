@@ -5,6 +5,7 @@ import Education from "@/components/Education";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Tech from "@/components/Tech";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Education />
       <Tech />
       <Projects />
+      <Contact />
     </main>
   );
 }
