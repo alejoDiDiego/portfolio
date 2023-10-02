@@ -7,10 +7,10 @@ import { SectionWrapper } from "@/hoc";
 
 const Hero = () => {
   const handleDownload = () => {
-    const url = "/Curriculum Alejo Di Diego English.pdf";
+    const url = "/Resume Alejo Di Diego English.pdf";
     const link = document.createElement("a");
     link.href = url;
-    link.download = "Curriculum Alejo Di Diego English.pdf"; // Replace with your desired file name
+    link.download = "Resume Alejo Di Diego English.pdf"; // Replace with your desired file name
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -27,7 +27,7 @@ const Hero = () => {
             Fullstack Developer, Computer Technician and Computer Systems
             Engineering student
           </p>
-          <div className="gradient overflow-hidden rounded-3xl flex justify-center items-center  w-[40%]">
+          <div className="gradient overflow-hidden rounded-3xl flex justify-center items-center w-[60%] sm:w-[40%]">
             <button
               onClick={handleDownload}
               className=" w-full bg-[#200744] shadow font-bold rounded-3xl m-1 p-2 hover:bg-transparent transition-all duration-200"

@@ -244,4 +244,40 @@ const projects = [
 // <a href="https://www.flaticon.com/free-icons/html" title="html icons">Html icons created by Freepik - Flaticon</a>
 // <a href="https://www.flaticon.com/free-icons/javascript" title="javascript icons">Javascript icons created by Freepik - Flaticon</a>
 // <a href="https://www.flaticon.com/free-icons/typescript" title="typescript icons">Typescript icons created by Freepik - Flaticon</a>
-export { navLinks, services, education, technologies, projects };
+
+const contact = [
+  {
+    name: "Whatsapp",
+    icon: "/contact/whatsapp.png",
+    link: "https://wa.link/kebcjs",
+    number: "+54 11 3950-0991",
+  },
+  {
+    name: "Github",
+    icon: "/contact/github.png",
+    link: "https://github.com/alejoDiDiego",
+    number: "",
+  },
+  {
+    name: "LinkedIn",
+    icon: "/contact/linkedin.png",
+    link: "https://www.linkedin.com/in/alejo-di-diego/",
+    number: "",
+  },
+  {
+    name: "Email",
+    icon: "/contact/gmail.png",
+    link: "mailto:alejohernandidiego@gmail.com",
+    number: "alejohernandidiego@gmail.com",
+  },
+];
+
+// <a href="https://www.flaticon.com/free-icons/whatsapp" title="whatsapp icons">Whatsapp icons created by Freepik - Flaticon</a>
+
+// <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Freepik - Flaticon</a>
+
+// <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
+
+// <a href="https://www.flaticon.com/free-icons/gmail" title="gmail icons">Gmail icons created by Freepik - Flaticon</a>
+
+export { navLinks, services, education, technologies, projects, contact };

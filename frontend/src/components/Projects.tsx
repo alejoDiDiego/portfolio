@@ -84,7 +84,7 @@ const Projects = () => {
     <div className="text-white max-w-3xl w-full">
       <Title subTitle="my works" title="Projects." />
 
-      <div className="flex flex-wrap gap-10 mt-10 justify-center sm:justify-start">
+      <div className="flex flex-wrap gap-10 justify-center sm:justify-start">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} index={index} />
         ))}
