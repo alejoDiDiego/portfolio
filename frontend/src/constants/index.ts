@@ -71,13 +71,6 @@ const education = [
     logo: sanJudasLogo,
   },
   {
-    startDate: "2018",
-    finishDate: "2021",
-    title: "English",
-    institution: "Edison English Instituo",
-    logo: edisonLogo,
-  },
-  {
     startDate: "2021",
     finishDate: "2021",
     title: "Responsive Web Design (300 hours)",
@@ -87,7 +80,7 @@ const education = [
   {
     startDate: "2020",
     finishDate: "2020",
-    title: "Power BI - Data Analysis andBusiness Intelligence Course",
+    title: "Power BI - Data Analysis and Business Intelligence Course",
     institution: "Udemy",
     logo: udemyLogo,
   },

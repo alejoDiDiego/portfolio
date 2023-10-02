@@ -56,7 +56,7 @@ const About = () => {
         React.js, Node.js, Express, Next.js, C#, ASP.NET Core and SQL and NoSQL
         databases. I am adaptable, quick learner and very detailed with my work.
         I really enjoy working with other people and I am always looking to
-        learn new things that could help either my personal and professional
+        learn new things that could help me in my personal and professional
         life.
       </motion.p>
       <div className="flex gap-10 mt-10 flex-wrap sm:justify-center lg:justify-start">
