@@ -40,7 +40,7 @@ const ContactItem = ({
           target="_blank"
           className="flex flex-col justify-center items-center gap-2  w-full h-full py-3   rounded-3xl bg-[#200744] hover:bg-transparent transition-all duration-200 relative"
         >
-          <div className="relative w-20 h-20">
+          <div className="relative w-16 h-16">
             <Image fill src={icon} alt={name} />
           </div>
           {number.length > 0 ? (
