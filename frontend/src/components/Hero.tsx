@@ -21,7 +21,7 @@ const Hero = () => {
       <div className="sm:px-16 absolute inset-0 top-[100px] sm:top-[145px] max-w-7xl mx-auto flex flex-col justify-center items-center ">
         <div className="mt-6 flex flex-col w-[335px] sm:w-[500px] gap-5 text-white noselect items-center">
           <h1 className=" sm:text-7xl text-5xl  font-black text-center">
-            Hi, I'm <span className="gradient-text   ">Alejo</span>
+            Hi, I&apos;m <span className="gradient-text   ">Alejo</span>
           </h1>
           <p className="text-center font-bold sm:text-lg">
             Fullstack Developer, Computer Technician and Computer Systems

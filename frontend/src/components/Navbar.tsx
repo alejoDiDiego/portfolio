@@ -48,7 +48,7 @@ const Navbar = () => {
           </div>
           <p className="text-white transition-all  text-[18px] font-bold cursor-pointer flex hover:text-slate-300 p-1 rounded-lg">
             Alejo &nbsp;
-            <span className="md:block hidden"> | Fullstack Developer</span>
+            <span className="md:block hidden">| Fullstack Developer</span>
           </p>
         </a>
       </div>
