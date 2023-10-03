@@ -224,6 +224,24 @@ const projects = [
     github: "",
   },
   {
+    name: "CRUD",
+    description:
+      "Create, Read, Update and Delete web app where you can create an account and create, edit, delete and search for tasks",
+    technologies: ["C#", "ASP.NET MVC", "HTML", "CSS", "Javascript", "LinQ"],
+    link: "https://github.com/alejoDiDiego/CRUDandLogin",
+    image: "/projects/crud.png",
+    github: "https://github.com/alejoDiDiego/CRUDandLogin",
+  },
+  {
+    name: "Hospital Management System",
+    description:
+      "Windows Forms app where you can add doctors, patients and schedule appointments between them",
+    technologies: ["C#", "Windows Forms"],
+    link: "https://github.com/alejoDiDiego/Hospital-Windows-Forms",
+    image: "/projects/hospital.png",
+    github: "https://github.com/alejoDiDiego/Hospital-Windows-Forms",
+  },
+  {
     name: "Color Changer",
     description:
       "Simple web page where you can change the background color by clicking a button. ",

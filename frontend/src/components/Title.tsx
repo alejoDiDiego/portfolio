@@ -4,7 +4,7 @@ import React from "react";
 
 const Title = ({ subTitle, title }: { subTitle: string; title: string }) => {
   return (
-    <motion.div className="mt-40 mb-10" variants={textVariant()}>
+    <motion.div className="mt-20 mb-6" variants={textVariant()}>
       <p className="text-white sm:text-[18px] text-[14px] uppercase text-secondary tracking-wider">
         {subTitle}
       </p>

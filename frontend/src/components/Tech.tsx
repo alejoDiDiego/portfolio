@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Tilt from "react-parallax-tilt";
 import Title from "./Title";
+import Image from "next/image";
 
 const TechCard = ({
   index,
@@ -19,7 +20,7 @@ const TechCard = ({
   return (
     <motion.div variants={fadeIn("right", "spring", index * 0.3, 0.6)}>
       <Tilt
-        className="overflow-hidden w-[130px] sm:w-[150px] gradient shadow-card rounded-3xl p-[2px]"
+        className="overflow-hidden w-[130px] sm:w-[120px] gradient shadow-card rounded-3xl p-[2px]"
         transitionSpeed={1500}
         perspective={500}
         glareEnable={true}
@@ -27,11 +28,11 @@ const TechCard = ({
         scale={1.02}
         reset={false}
       >
-        <div className="bg-[#200744] rounded-3xl py-5 px-12 min-h-[200px] flex justify-evenly items-center flex-col">
-          <div className="w-[80px] sm:w-[100px] min-h-[60px] sm:min-h-[100px] h-fit flex justify-center items-center overflow-hidden bg-white rounded-md p-1 sm:py-2 sm:px-3">
-            <img src={icon} alt={name} className="w-[100%] h-fit " />
+        <div className="bg-[#200744] rounded-3xl py-5  min-h-[150px] w-full flex justify-evenly items-center flex-col">
+          <div className="w-[80px] sm:w-[80px] min-h-[60px] sm:min-h-[30px] h-fit flex justify-center items-center overflow-hidden bg-white rounded-md p-1 relative">
+            <img src={icon} alt={name} className="w-full" />
           </div>
-          <h3 className="text-white text-center noselect font-black text-lg sm:text-xl">
+          <h3 className="text-white text-center noselect font-black text-lg sm:text-base">
             {name}
           </h3>
         </div>
@@ -44,7 +45,7 @@ const Tech = () => {
   return (
     <div className=" max-w-3xl w-full">
       <Title subTitle="WHAT I USE" title="Tech." />
-      <div className="flex flex-row flex-wrap justify-center mt-10 sm:justify-start gap-10">
+      <div className="flex flex-row flex-wrap justify-center  sm:justify-start gap-10">
         {technologies.map((tech, index) => (
           <TechCard
             key={index}

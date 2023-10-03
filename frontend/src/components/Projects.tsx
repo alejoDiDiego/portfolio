@@ -53,7 +53,7 @@ const ProjectCard = ({
             <img
               src={image}
               alt={name}
-              className="w-full object-contain rounded-t-3xl rounded-b-lg cursor-pointer"
+              className="w-full object-contain rounded-t-3xl max-h-[180px] rounded-b-lg cursor-pointer"
             />
           </a>
           <h3 className="text-white noselect text-center font-black text-2xl">
