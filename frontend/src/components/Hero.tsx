@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto ">
       <div className="sm:px-16 absolute inset-0 top-[100px] sm:top-[145px] max-w-7xl mx-auto flex flex-col justify-center items-center ">
-        <div className="mt-5 sm:mt-0 flex flex-col w-[335px] sm:w-[500px] gap-5 text-white noselect items-center">
+        <div className="mt-0 sm:mt-0 flex flex-col w-[335px] sm:w-[500px] gap-5 text-white noselect items-center">
           <h1 className=" sm:text-7xl text-5xl  font-black text-center">
             Hi, I&apos;m <span className="gradient-text   ">Alejo</span>
           </h1>
