@@ -16,13 +16,14 @@ const navLinks = [
     title: "About",
   },
   {
-    id: "education",
-    title: "Education",
-  },
-  {
     id: "projects",
     title: "Projects",
   },
+  {
+    id: "education",
+    title: "Education",
+  },
+
   {
     id: "contact",
     title: "Contact",
@@ -88,7 +89,7 @@ const education = [
     startDate: "2019",
     finishDate: "2019",
     title: "Advanced Excel Capacitation",
-    institution: "Udemy",
+    institution: "Universidad Tecnológica Nacional (UTN)",
     logo: utnLogo,
   },
 ];

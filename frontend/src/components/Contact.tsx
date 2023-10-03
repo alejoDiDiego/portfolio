@@ -50,7 +50,7 @@ const ContactItem = ({
               </p>
             </div>
           ) : (
-            <p className="text-white font-bold text-2xl">{name}</p>
+            <p className="text-white font-bold text-lg">{name}</p>
           )}
         </a>
       </Tilt>
