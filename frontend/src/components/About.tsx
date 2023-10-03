@@ -50,7 +50,7 @@ const About = () => {
       <Title subTitle="INTRODUCTION" title="About me." />
       <motion.p
         variants={fadeIn("up", "", 0.1, 1)}
-        className="-mt-8 text-white text-[17px] leading-[30px] "
+        className="-mt-4 text-white text-[17px] leading-[30px] "
       >
         I am a software developer with knowledge in Typescript, Javascript,
         React.js, Node.js, Express, Next.js, C#, ASP.NET Core and SQL and NoSQL
