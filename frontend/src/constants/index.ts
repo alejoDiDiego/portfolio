@@ -183,6 +183,24 @@ const technologies = [
 
 const projects = [
   {
+    name: "MyFinances",
+    description:
+      "A fullstack web app where you can manage all your personal or business finances. It has authentication, Google login, filters, charts, email sending, etc. You can add, edit, filter or delete both your expenses and your budget",
+    technologies: [
+      "Laravel",
+      "PHP",
+      "React",
+      "Inertia",
+      "PostgreSQL (Supabase)",
+      "SQLite",
+      "Typescript",
+      "TailwindCSS",
+    ],
+    link: "https://expenses-production-b141.up.railway.app",
+    image: "/projects/myfinances.png",
+    github: "https://github.com/alejoDiDiego/expenses/tree/main/laravel3",
+  },
+  {
     name: "Task Manager",
     description:
       "A Task Manager/TODO web app where you can create, edit, finish and delete your tasks. They are stored in the localStorage of your browser.",
