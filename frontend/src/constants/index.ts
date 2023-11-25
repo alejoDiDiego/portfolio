@@ -116,6 +116,10 @@ const technologies = [
     icon: "/technologies/react.png",
   },
   {
+    name: "Redux",
+    icon: "/technologies/redux.png",
+  },
+  {
     name: "NextJS",
     icon: "/technologies/nextjs.png",
   },
@@ -138,6 +142,22 @@ const technologies = [
   {
     name: "Python",
     icon: "/technologies/python.png",
+  },
+  {
+    name: "PHP",
+    icon: "/technologies/php.png",
+  },
+  {
+    name: "Laravel",
+    icon: "/technologies/laravel.png",
+  },
+  {
+    name: "Angular",
+    icon: "/technologies/angular.png",
+  },
+  {
+    name: "Ngrx",
+    icon: "/technologies/ngrx.png",
   },
   {
     name: "C",
