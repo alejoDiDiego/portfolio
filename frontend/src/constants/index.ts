@@ -10,10 +10,20 @@ const freeCodeCampLogo = "/education/freeCodeCamp.png";
 const udemyLogo = "/education/udemy.png";
 const utnLogo = "/education/utn.png";
 
+const sortboksLogo = "/experience/sortboks.png";
+const netjamLogo = "/experience/netjam.png";
+const ibmLogo = "/experience/ibm.png";
+const socialnetLogo = "/experience/socialnet.png";
+const inmoLogo = "/experience/inmo.png";
+
 const navLinks = [
   {
     id: "about",
     title: "About",
+  },
+  {
+    id: "experience",
+    title: "Experience",
   },
   {
     id: "projects",
@@ -23,7 +33,6 @@ const navLinks = [
     id: "education",
     title: "Education",
   },
-
   {
     id: "contact",
     title: "Contact",
@@ -32,12 +41,12 @@ const navLinks = [
 
 const services = [
   {
-    title: "Frontend Developer",
-    icon: front,
+    title: "Backend Engineer",
+    icon: back,
   },
   {
-    title: "Backend Developer",
-    icon: back,
+    title: "Technical Project Manager",
+    icon: front,
   },
 ];
 
@@ -48,13 +57,6 @@ const education = [
     title: "Computer Systems Engineering",
     institution: "Universidad Abierta Interamericana (UAI)",
     logo: uaiLogo,
-  },
-  {
-    startDate: "2023",
-    finishDate: "2023",
-    title: "Industrial Engineering",
-    institution: "Universidad Nacional de la Matanza",
-    logo: unlamLogo,
   },
   {
     startDate: "2022",
@@ -79,13 +81,6 @@ const education = [
     logo: freeCodeCampLogo,
   },
   {
-    startDate: "2020",
-    finishDate: "2020",
-    title: "Power BI - Data Analysis and Business Intelligence Course",
-    institution: "Udemy",
-    logo: udemyLogo,
-  },
-  {
     startDate: "2019",
     finishDate: "2019",
     title: "Advanced Excel Capacitation",
@@ -96,52 +91,20 @@ const education = [
 
 const technologies = [
   {
-    name: "HTML",
-    icon: "/technologies/html.png",
-  },
-  {
-    name: "CSS",
-    icon: "/technologies/css.png",
-  },
-  {
-    name: "Javascript",
-    icon: "/technologies/js.png",
-  },
-  {
-    name: "Typescript",
-    icon: "/technologies/typescript.png",
-  },
-  {
-    name: "React",
-    icon: "/technologies/react.png",
-  },
-  {
-    name: "Redux",
-    icon: "/technologies/redux.png",
-  },
-  {
-    name: "NextJS",
-    icon: "/technologies/nextjs.png",
-  },
-  {
     name: "NodeJS",
     icon: "/technologies/node.png",
   },
   {
-    name: "TailwindCSS",
-    icon: "/technologies/tailwind.png",
+    name: "NestJS",
+    icon: "/technologies/nestjs.png",
   },
   {
-    name: "C#",
-    icon: "/technologies/csharp.png",
+    name: "TypeScript",
+    icon: "/technologies/typescript.png",
   },
   {
-    name: ".Net Core",
-    icon: "/technologies/netcore.png",
-  },
-  {
-    name: "Python",
-    icon: "/technologies/python.png",
+    name: "JavaScript",
+    icon: "/technologies/js.png",
   },
   {
     name: "PHP",
@@ -152,12 +115,28 @@ const technologies = [
     icon: "/technologies/laravel.png",
   },
   {
-    name: "Angular",
-    icon: "/technologies/angular.png",
+    name: "Prisma",
+    icon: "/technologies/prisma.png",
   },
   {
-    name: "Ngrx",
-    icon: "/technologies/ngrx.png",
+    name: "Rust",
+    icon: "/technologies/rust.png",
+  },
+  {
+    name: "Python",
+    icon: "/technologies/python.png",
+  },
+  {
+    name: "C#",
+    icon: "/technologies/csharp.png",
+  },
+  {
+    name: ".Net Core",
+    icon: "/technologies/netcore.png",
+  },
+  {
+    name: "Go",
+    icon: "/technologies/go.png",
   },
   {
     name: "C",
@@ -168,28 +147,40 @@ const technologies = [
     icon: "/technologies/java.png",
   },
   {
-    name: "Go",
-    icon: "/technologies/go.png",
+    name: "PostgreSQL",
+    icon: "/technologies/postgresql.png",
   },
   {
     name: "MySQL",
     icon: "/technologies/mysql.png",
   },
   {
-    name: "PostgreSQL",
-    icon: "/technologies/postgresql.png",
+    name: "MariaDB",
+    icon: "/technologies/mariadb.png",
   },
   {
     name: "SQL Server",
     icon: "/technologies/sqlserver.png",
   },
   {
-    name: "Firebase",
-    icon: "/technologies/firebase.png",
+    name: "MongoDB",
+    icon: "/technologies/mongodb.png",
+  },
+  {
+    name: "Redis",
+    icon: "/technologies/redis.png",
+  },
+  {
+    name: "Docker",
+    icon: "/technologies/docker.png",
   },
   {
     name: "Git",
     icon: "/technologies/git.png",
+  },
+  {
+    name: "Firebase",
+    icon: "/technologies/firebase.png",
   },
   {
     name: "Excel",
@@ -198,6 +189,84 @@ const technologies = [
   {
     name: "Power BI",
     icon: "/technologies/powerbi.png",
+  },
+];
+
+const experience = [
+  {
+    startDate: "Oct 2025",
+    finishDate: "Present",
+    title: "Technical Project Manager / Technical Implementation",
+    company: "Sortboks",
+    logo: sortboksLogo,
+    points: [
+      "Leading an Instana implementation for a banking client, coordinating requirements, technical tasks and stakeholder communication.",
+      "Designing Smart Alerts and operational workflows to support incident detection, escalation and reliability practices.",
+      "Managing a cybersecurity solution involving SOC, SOAR and SIEM, including QRadar implementation details, configuration, agents and server-related requirements (Linux, Windows and FortiGate).",
+      "Creating technical documentation, training material and escalation criteria for SOC L1 teams to identify and escalate real incidents.",
+    ],
+  },
+  {
+    startDate: "Sep 2025",
+    finishDate: "Mar 2026",
+    title: "Backend Developer (NestJS)",
+    company: "NetJam Group",
+    logo: netjamLogo,
+    points: [
+      "Built backend services and microservices with Node.js, NestJS and TypeScript, following Domain-Driven Design principles.",
+      "Designed and maintained REST API endpoints, service layers and backend modules for production-oriented applications.",
+      "Wrote tests and technical documentation to improve maintainability and support backend delivery.",
+      "Collaborated on backend architecture decisions involving modularity, data flow and service boundaries.",
+    ],
+  },
+  {
+    startDate: "Apr 2025",
+    finishDate: "Oct 2025",
+    title: "Pre-Sales Engineer (IBM Power)",
+    company: "IBM",
+    logo: ibmLogo,
+    points: [
+      "Analyzed enterprise technical requirements and infrastructure challenges to design solution proposals for clients and partners.",
+      "Led the Linux on Power proposal, translating platform capabilities into client-facing technical and business value.",
+      "Delivered technical presentations in English and collaborated with sales, architecture and engineering teams to validate feasibility.",
+      "Gained exposure to enterprise-grade infrastructure, performance, reliability and deployment considerations.",
+    ],
+  },
+  {
+    startDate: "Oct 2024",
+    finishDate: "Apr 2025",
+    title: "Storage & Power Pre-Sales Intern",
+    company: "IBM",
+    logo: ibmLogo,
+    points: [
+      "Implemented and led an AI on Power proposal; presented the initiative in English to the global CFO of IBM Power.",
+      "Expanded from Storage pre-sales into Power, integrating with IBM infrastructure teams within six months.",
+    ],
+  },
+  {
+    startDate: "Jan 2024",
+    finishDate: "Oct 2024",
+    title: "Backend-Focused Full Stack Developer (Laravel / JavaScript)",
+    company: "Socialnet",
+    logo: socialnetLogo,
+    points: [
+      "Developed a web platform from scratch to manage internal and public documentation, including backend modules for tasks, procedures and integrations.",
+      "Built authentication and workflow features including passwordless login, table reordering, GitLab integration, Google Docs API integration and Figma integration.",
+      "Translated business needs into functional and technical specifications for the redesign of the company's main product.",
+      "Contributed to core sections of the company's main application rewrite, focusing on backend logic, integrations and maintainable implementation.",
+    ],
+  },
+  {
+    startDate: "Mar 2022",
+    finishDate: "Dec 2022",
+    title: "Lead Developer / Product & Project Manager (Next.js, Firebase)",
+    company: "Inmo",
+    logo: inmoLogo,
+    points: [
+      "Led a team of 5 to build a real-estate software product from concept to functional prototype.",
+      "Owned scope, requirements, UX direction and development execution across the product lifecycle.",
+      "Built product features with Next.js and Firebase while coordinating technical decisions and delivery.",
+    ],
   },
 ];
 
@@ -236,15 +305,6 @@ const projects = [
     github: "https://github.com/alejoDiDiego/task-manager",
   },
   {
-    name: "Tic Tac Toe",
-    description:
-      "A Tic Tac Toe player vs player game that counts the matches and wins.",
-    technologies: ["React", "NextJS", "Typescript", "TailwindCSS", "CSS"],
-    link: "https://tictactoe-brown-iota.vercel.app/",
-    image: "/projects/tictactoe.png",
-    github: "https://github.com/alejoDiDiego/tictactoe",
-  },
-  {
     name: "Inmo",
     description:
       "A Zillow like web app made as part of the professional practices in my last year of technical high school. You could create and edit a profile, create, edit, delete and search for properties. You could also see and search properties in a map and filter them by price, type, etc.",
@@ -279,15 +339,6 @@ const projects = [
     image: "/projects/hospital.png",
     github: "https://github.com/alejoDiDiego/Hospital-Windows-Forms",
   },
-  {
-    name: "Color Changer",
-    description:
-      "Simple web page where you can change the background color by clicking a button. ",
-    technologies: ["React", "Javascript", "CSS", "TailwindCSS"],
-    link: "https://alejodidiego.github.io/color-changer/",
-    image: "/projects/colorchanger.png",
-    github: "https://github.com/alejoDiDiego/color-changer",
-  },
 ];
 
 // <a href="https://www.flaticon.com/free-icons/css" title="css icons">Css icons created by Pixel perfect - Flaticon</a>
@@ -300,7 +351,7 @@ const contact = [
     name: "Whatsapp",
     icon: "/contact/whatsapp.png",
     link: "https://wa.link/kebcjs",
-    number: "+54 11 3950-0991",
+    number: "+54 11 7244-4127",
   },
   {
     name: "Github",
@@ -330,4 +381,12 @@ const contact = [
 
 // <a href="https://www.flaticon.com/free-icons/gmail" title="gmail icons">Gmail icons created by Freepik - Flaticon</a>
 
-export { navLinks, services, education, technologies, projects, contact };
+export {
+  navLinks,
+  services,
+  education,
+  experience,
+  technologies,
+  projects,
+  contact,
+};

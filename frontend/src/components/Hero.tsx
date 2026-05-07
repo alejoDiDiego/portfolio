@@ -24,7 +24,7 @@ const Hero = () => {
             Hi, I&apos;m <span className="gradient-text   ">Alejo</span>
           </h1>
           <p className="text-center font-bold sm:text-lg">
-            Fullstack Developer, Computer Technician and Computer Systems
+            Backend Engineer, Computer Technician and Computer Systems
             Engineering student
           </p>
           <div className="gradient overflow-hidden rounded-3xl flex justify-center items-center w-[60%] sm:w-[40%]">

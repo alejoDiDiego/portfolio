@@ -52,12 +52,13 @@ const About = () => {
         variants={fadeIn("up", "", 0.1, 1)}
         className="-mt-4 text-white text-[17px] leading-[30px] "
       >
-        I am a software developer with knowledge in Typescript, Javascript,
-        React.js, Node.js, Express, Next.js, C#, ASP.NET Core and SQL and NoSQL
-        databases. I am adaptable, quick learner and very detailed with my work.
-        I really enjoy working with other people and I am always looking to
-        learn new things that could help me in my personal and professional
-        life.
+        I am a backend engineer specializing in Node.js, NestJS, TypeScript and
+        PostgreSQL, with experience building scalable backend services, REST
+        APIs and microservices using Domain-Driven Design principles. I also
+        have a strong foundation in infrastructure, observability and
+        cybersecurity from my work with enterprise clients. I am adaptable, a
+        quick learner and very detail-oriented. I enjoy collaborating with
+        cross-functional teams and constantly expanding my technical skills.
       </motion.p>
       <div className="flex gap-10 mt-10 flex-wrap sm:justify-center lg:justify-start">
         {services.map((service, index) => (

@@ -1,5 +1,5 @@
 "use client";
-import { education } from "@/constants";
+import { experience } from "@/constants";
 import { SectionWrapper } from "@/hoc";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { motion } from "framer-motion";
@@ -11,19 +11,21 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import Title from "./Title";
 
-const EducationCard = ({
+const ExperienceCard = ({
   startDate,
   finishDate,
   title,
-  institution,
+  company,
   logo,
+  points,
   index,
 }: {
   startDate: string;
   finishDate: string;
   title: string;
-  institution: string;
+  company: string;
   logo: string;
+  points: string[];
   index: number;
 }) => {
   return (
@@ -42,37 +44,49 @@ const EducationCard = ({
         <div className="flex overflow-hidden justify-center items-center w-full h-full">
           <img
             src={logo}
-            alt={institution}
+            alt={company}
             className="w-full rounded-full h-full object-contain"
           />
         </div>
       }
     >
       <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
-        <h3 className="text-white text-[24px] font-bold">{title}</h3>
+        <h3 className="text-white text-[20px] sm:text-[24px] font-bold">
+          {title}
+        </h3>
         <p
-          className="text-secondary text-[16px] font-semibold"
+          className="text-secondary text-[14px] sm:text-[16px] font-semibold"
           style={{ margin: 0 }}
         >
-          {institution}
+          {company}
         </p>
+        <ul className="mt-4 list-disc ml-4 space-y-2">
+          {points.map((point, pointIndex) => (
+            <li
+              key={pointIndex}
+              className="text-gray-300 text-[13px] sm:text-[14px] leading-[20px] sm:leading-[22px]"
+            >
+              {point}
+            </li>
+          ))}
+        </ul>
       </motion.div>
     </VerticalTimelineElement>
   );
 };
 
-const Education = () => {
+const Experience = () => {
   return (
-    <div className="text-white   max-w-3xl w-full">
-      <Title subTitle="MY TRAJECTORY" title="Education." />
+    <div className="text-white max-w-3xl w-full">
+      <Title subTitle="what i have done" title="Work Experience." />
 
       <VerticalTimeline lineColor="" animate={false} layout="1-column-left">
-        {education.map((education, index) => (
-          <EducationCard key={index} index={index} {...education} />
+        {experience.map((exp, index) => (
+          <ExperienceCard key={index} index={index} {...exp} />
         ))}
       </VerticalTimeline>
     </div>
   );
 };
 
-export default SectionWrapper(Education, "education");
+export default SectionWrapper(Experience, "experience");
