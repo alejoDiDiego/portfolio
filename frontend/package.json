@@ -35,6 +35,9 @@
     "three": "^0.156.1",
     "typescript": "5.2.2"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "devDependencies": {
     "@types/react-helmet": "^6.1.6",
     "@types/react-vertical-timeline-component": "^3.3.4"
