@@ -13,7 +13,7 @@ const SectionWrapper = (
         variants={staggerContainer()}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="sm:px-16 px-6 sm:py-16 py-10 max-w-4xl flex justify-center  relative z-0"
       >
         <span className="hash-span" id={idName}>
